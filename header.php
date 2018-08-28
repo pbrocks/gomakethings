@@ -1,18 +1,23 @@
 <?php
-
 /**
  * header.php
  * Template for header content.
  */
 
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?> <?php echo keel_header_classes(); ?>>
+<html <?php language_attributes(); ?> <?php echo go_make_header_classes(); ?>>
 
 	<head>
-		<meta charset="<?php bloginfo('charset'); ?>">
+		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
-		<?php if ( is_home () ) : ?><meta name="description" content="<?php bloginfo('description'); ?>"><?php endif; ?>
+		<?php
+		if ( is_home() ) :
+			?>
+			<meta name="description" content="<?php bloginfo( 'description' ); ?>">
+			<?php
+		endif;
+		?>
 
 		<!-- Mobile Screen Resizing -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,8 +31,8 @@
 		<link rel="icon" sizes="16x16 32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/favicon.ico">
 
 		<!-- Feeds & Pings -->
-		<link rel="alternate" type="application/rss+xml" title="<?php printf( __( '%s RSS Feed', 'keel' ), get_bloginfo( 'name' ) ); ?>" href="<?php bloginfo( 'rss2_url' ); ?>">
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+		<link rel="alternate" type="application/rss+xml" title="<?php printf( __( '%s RSS Feed', 'go-make-things' ), get_bloginfo( 'name' ) ); ?>" href="<?php bloginfo( 'rss2_url' ); ?>">
+		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 		<?php wp_head(); ?>
 
@@ -36,7 +41,7 @@
 	<?php
 		// Get page layout options
 		global $post;
-		$page_navs = get_post_meta( $post->ID, 'keel_page_navs', true );
+		$page_navs = get_post_meta( $post->ID, 'go_make_page_navs', true );
 	?>
 
 	<body <?php body_class(); ?>>

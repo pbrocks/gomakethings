@@ -1,5 +1,4 @@
 <?php
-
 /**
  * footer.php
  * Template for footer content.
@@ -16,7 +15,7 @@
 
 			<?php get_template_part( 'nav', 'secondary' ); ?>
 
-			<?php if ( !empty( $options['footer_content'] ) ) : ?>
+			<?php if ( ! empty( $options['footer_content'] ) ) : ?>
 				<p>
 					<span class="text-small">
 						<?php echo stripslashes( str_replace( '[date]', date( 'Y' ), $options['footer_content'] ) ); ?>

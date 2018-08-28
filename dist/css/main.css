@@ -1,6 +1,6 @@
 /*!
  * gomakethings v11.0.1: The WordPress theme for GoMakeThings.com
- * (c) 2017 Chris Ferdinandi
+ * (c) 2018 Chris Ferdinandi
  * MIT License
  * https://github.com/cferdinandi/gomakethings
  * Open Source Credits: https://github.com/toddmotto/fluidvids, http://prismjs.com, https://github.com/filamentgroup/loadJS/, https://github.com/filamentgroup/loadCSS, https://github.com/bramstein/fontfaceobserver, https://github.com/muffinresearch/payment-icons, https://nosir.github.io/cleave.js/
@@ -855,7 +855,7 @@ pre code {
 }
 
 /* line 18, src/sass/components/_buttons.scss */
-.btn, input[type="submit"], .edd-self-service-button, .mailchimp-form-button, .gmt-edd-slack-form-button, .btn:visited, input[type="submit"]:visited, .edd-self-service-button:visited, .mailchimp-form-button:visited, .gmt-edd-slack-form-button:visited {
+.btn, input[type="submit"], .edd-self-service-button, .mailchimp-form-button, .gmt-edd-slack-form-button, .btn:visited, input:visited[type="submit"], .edd-self-service-button:visited, .mailchimp-form-button:visited, .gmt-edd-slack-form-button:visited {
   color: #ffffff;
 }
 
@@ -865,14 +865,14 @@ a.btn, .btn.link-block-styled, input.link-block-styled[type="submit"], .link-blo
 }
 
 /* line 32, src/sass/components/_buttons.scss */
-.btn:hover, input[type="submit"]:hover, .edd-self-service-button:hover, .mailchimp-form-button:hover, .gmt-edd-slack-form-button:hover,
+.btn:hover, input:hover[type="submit"], .edd-self-service-button:hover, .mailchimp-form-button:hover, .gmt-edd-slack-form-button:hover,
 .btn:focus,
-input[type="submit"]:focus,
+input:focus[type="submit"],
 .edd-self-service-button:focus,
 .mailchimp-form-button:focus,
 .gmt-edd-slack-form-button:focus,
 .btn:active,
-input[type="submit"]:active,
+input:active[type="submit"],
 .edd-self-service-button:active,
 .mailchimp-form-button:active,
 .gmt-edd-slack-form-button:active,
@@ -894,18 +894,26 @@ input.active[type="submit"],
 
 /* line 52, src/sass/components/_buttons.scss */
 .btn-secondary:hover,
-a .btn-secondary:hover, .link-block-styled .btn-secondary:hover,
+a .btn-secondary:hover,
+.link-block-styled .btn-secondary:hover,
 .btn-secondary:focus,
-a .btn-secondary:focus, .link-block-styled .btn-secondary:focus,
+a .btn-secondary:focus,
+.link-block-styled .btn-secondary:focus,
 .btn-secondary:active,
-a .btn-secondary:active, .link-block-styled .btn-secondary:active,
+a .btn-secondary:active,
+.link-block-styled .btn-secondary:active,
 .btn-secondary.active {
   background-color: #343434;
   border-color: #343434;
 }
 
 /* line 63, src/sass/components/_buttons.scss */
-.btn:active, input[type="submit"]:active, .edd-self-service-button:active, .mailchimp-form-button:active, .gmt-edd-slack-form-button:active,
+
+.btn:active,
+input:active[type="submit"],
+.edd-self-service-button:active,
+.mailchimp-form-button:active,
+.gmt-edd-slack-form-button:active,
 .btn.active,
 input.active[type="submit"],
 .active.edd-self-service-button,
@@ -919,9 +927,9 @@ input.active[type="submit"],
 .btn.disabled, input.disabled[type="submit"], .disabled.edd-self-service-button, .disabled.mailchimp-form-button, .disabled.gmt-edd-slack-form-button,
 .btn[disabled],
 input[disabled][type="submit"],
-[disabled].edd-self-service-button,
-[disabled].mailchimp-form-button,
-[disabled].gmt-edd-slack-form-button {
+.edd-self-service-button[disabled],
+.mailchimp-form-button[disabled],
+.gmt-edd-slack-form-button[disabled] {
   pointer-events: none;
   cursor: not-allowed;
   opacity: 0.5;
@@ -939,14 +947,14 @@ input[disabled][type="submit"],
 /* line 84, src/sass/components/_buttons.scss */
 .btn-block, .edd-self-service-button, .mailchimp-form-button,
 input[type="submit"].btn-block,
-input[type="submit"].edd-self-service-button,
-input[type="submit"].mailchimp-form-button,
+input.edd-self-service-button[type="submit"],
+input.mailchimp-form-button[type="submit"],
 input[type="reset"].btn-block,
-input[type="reset"].edd-self-service-button,
-input[type="reset"].mailchimp-form-button,
+input.edd-self-service-button[type="reset"],
+input.mailchimp-form-button[type="reset"],
 input[type="button"].btn-block,
-input[type="button"].edd-self-service-button,
-input[type="button"].mailchimp-form-button {
+input.edd-self-service-button[type="button"],
+input.mailchimp-form-button[type="button"] {
   display: block;
   width: 100%;
   margin-right: 0;
@@ -972,7 +980,7 @@ input[type="submit"] {
 }
 
 /* line 112, src/sass/components/_buttons.scss */
-.btn:last-child, input[type="submit"]:last-child, .edd-self-service-button:last-child, .mailchimp-form-button:last-child, .gmt-edd-slack-form-button:last-child,
+.btn:last-child, input:last-child[type="submit"], .edd-self-service-button:last-child, .mailchimp-form-button:last-child, .gmt-edd-slack-form-button:last-child,
 input.btn,
 input[type="submit"],
 input.edd-self-service-button,
@@ -1911,7 +1919,7 @@ tfoot th {
  * @link http://juicystudio.com/article/screen-readers-display-none.php
  */
 /* line 273, src/sass/components/_overrides.scss */
-[hidden], template, .tarpit, label[for="edd-discount"], .js-edd #keel-edd-no-js-purchase-message, #edd_secure_site_wrapper, #edd_checkout_user_info legend,
+[hidden], template, .tarpit, label[for="edd-discount"], .js-edd #go-make-edd-no-js-purchase-message, #edd_secure_site_wrapper, #edd_checkout_user_info legend,
 #edd_cc_fields legend,
 #edd_cc_address legend,
 #edd-support-wrap legend, #edd_checkout_user_info .edd-required-indicator,
@@ -1947,9 +1955,15 @@ tfoot th {
 }
 
 /* line 291, src/sass/components/_overrides.scss */
-.clearfix:after, .container:after,
-.row:after, #edd_cc_fields:after,
-#edd_cc_address:after, .edd-self-service-row:after, .mailchimp-form-row:after, .nav-wrap:after {
+
+.clearfix:after,
+.container:after,
+.row:after,
+#edd_cc_fields:after,
+#edd_cc_address:after,
+.edd-self-service-row:after,
+.mailchimp-form-row:after,
+.nav-wrap:after {
   clear: both;
 }
 
@@ -1980,23 +1994,21 @@ tfoot th {
 	 * Underline all links
 	 */
   /* line 30, src/sass/components/_print.scss */
-  a, .link-block-styled,
-  a:visited,
-  .link-block-styled:visited {
+  a, .link-block-styled, a:visited, .link-block-styled:visited {
     text-decoration: underline;
   }
   /**
 	 * Show URL after links
 	 */
   /* line 38, src/sass/components/_print.scss */
-  a[href]:after, [href].link-block-styled:after {
+  a[href]:after, .link-block-styled[href]:after {
     content: " (" attr(href) ")";
   }
   /**
 	 * Don't show URL for internal links
 	 */
   /* line 45, src/sass/components/_print.scss */
-  a[href^="#"]:after, [href^="#"].link-block-styled:after {
+  a[href^="#"]:after, .link-block-styled[href^="#"]:after {
     content: "";
   }
   /**

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * nav-secondary.php
  * Template for the secondary site navigation.
@@ -10,13 +9,15 @@
 
 <?php if ( has_nav_menu( 'secondary' ) ) : ?>
 	<nav class="tabindex nav-secondary" id="nav-secondary" tabindex="-1">
-		<?php wp_nav_menu(
+		<?php
+		wp_nav_menu(
 			array(
 				'theme_location' => 'secondary',
 				'container'      => false,
 				'menu_class'     => 'list-inline list-inline-responsive',
 				'depth'          => -1,
 			)
-		); ?>
+		);
+		?>
 	</nav>
 <?php endif; ?>

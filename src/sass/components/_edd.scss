@@ -94,7 +94,7 @@ label[for="edd-discount"] {
 }
 
 // Message above disabled "Complete Purchase" button when JS isn't enabled
-.js-edd #keel-edd-no-js-purchase-message {
+.js-edd #go-make-edd-no-js-purchase-message {
 	@extend [hidden];
 }
 

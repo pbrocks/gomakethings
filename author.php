@@ -1,5 +1,4 @@
 <?php
-
 /**
  * author.php
  * Template for content by author.
@@ -7,8 +6,7 @@
 
 get_header(); ?>
 
-<?php if (have_posts()) : ?>
-
+<?php if ( have_posts() ) : ?>
 	<header>
 		<h1>
 			<?php
@@ -35,11 +33,12 @@ get_header(); ?>
 		 * the loop properly, in full.
 		 */
 		rewind_posts();
-		while (have_posts()) : the_post();
-	?>
+	while ( have_posts() ) :
+		the_post();
+		?>
 		<?php
-			// Insert the post content
-			get_template_part( 'content', 'Post Content' );
+		// Insert the post content
+		get_template_part( 'content', 'Post Content' );
 		?>
 	<?php endwhile; ?>
 

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * 404.php
  * Template for 404 error page.
@@ -9,7 +8,7 @@ get_header(); ?>
 
 <?php
 	// Get the theme options
-	$options = keel_get_theme_options();
+	$options = go_make_get_theme_options();
 ?>
 
 <article>
@@ -21,9 +20,9 @@ get_header(); ?>
 
 	<?php
 		// Insert the search form
-		if ( $options['404_show_search'] === 'on' ) {
-			get_search_form();
-		}
+	if ( $options['404_show_search'] === 'on' ) {
+		get_search_form();
+	}
 	?>
 
 </article>
